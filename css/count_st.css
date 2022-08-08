@@ -1,0 +1,68 @@
+body,
+button,
+div,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+    word-break: break-all;
+}
+
+button {
+    vertical-align: middle;
+    border: none;
+    border-radius: 0;
+}
+
+.blind {
+    position: absolute;
+    z-index: -10;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    font-size: medium;
+    line-height: normal;
+    word-break: break-all;
+}
+
+.inner {
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin: 50px 0 0 50px;
+}
+
+#minus,
+#plus {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: no-repeat center center;
+}
+
+#minus {
+    background-image: url(../images/btn-minus-16.svg);
+}
+
+#plus {
+    background-image: url(../images/btn-plus-16.svg);
+}

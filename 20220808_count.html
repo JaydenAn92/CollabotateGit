@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+    <link rel="stylesheet" href="css/count_st.css">
+</head>
+
+<body>
+    <!--count plus & minus -->
+    <div class="inner">
+        <button type="button" id="minus"><span class="blind">빼기</span></button>
+        <span id="result">0</span>
+        <button type="button" id="plus"><span class="blind">더하기</span></button>
+    </div>
+    <!--//count plus & minus -->
+</body>
+<script>
+    const num = document.getElementById('result');
+    const minusBtn = document.getElementById('minus');
+    const plusBtn = document.getElementById('plus');
+
+    //+버튼 클릭 시 result 부분 증가
+    plusBtn.addEventListener('click', function () {
+        let count = Number(num.innerText)
+        count = count + 1;
+        num.innerText = count;
+    })
+
+    //-버튼 클릭 시 result 부분 감소
+    minusBtn.addEventListener('click', function () {
+        let count = Number(num.innerText)
+        count = count - 1;
+        num.innerText = count;
+    })
+</script>
+
+</html>
