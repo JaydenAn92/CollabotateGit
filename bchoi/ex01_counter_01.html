@@ -24,7 +24,7 @@
         $(".wrap .cntBtn").on("click", function() { //버튼 클릭시
             if ($(this).hasClass("plus")) { //플러스 버튼 클릭 시
                 cnt++;
-            } else { //그 외 버튼 클릭 시 (버튼이 3개 초과시 변경 필요)
+            } else if ($(this).hasClass("minus")) { //플러스 버튼 클릭 시
                 cnt--;
             }
             $(".wrap .numTxt").text(cnt);
