@@ -72,7 +72,9 @@
             count = count - 1;
             num.innerText = count;
         } else if (count == 0) {
-            alert("0개 미만은 장바구니에 담을 수 없습니다.")
+            alert("장바구니의 최소수량은 1개입니다.")
+            minusBtn.disabled = true;
+            minusBtn.style = "background-color:#ccc"
         }
     }
 
