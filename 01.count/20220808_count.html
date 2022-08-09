@@ -16,24 +16,69 @@
     </div>
     <!--//count plus & minus -->
 </body>
+
 <script>
     const num = document.getElementById('result');
     const minusBtn = document.getElementById('minus');
     const plusBtn = document.getElementById('plus');
 
+    //20220808
     //+버튼 클릭 시 result 부분 증가
-    plusBtn.addEventListener('click', function () {
-        let count = Number(num.innerText)
-        count = count + 1;
-        num.innerText = count;
-    })
+    // plusBtn.addEventListener('click', function () {
+    //     let count = Number(num.innerText)
+    //     count = count + 1;
+    //     num.innerText = count;
+    // })
 
     //-버튼 클릭 시 result 부분 감소
-    minusBtn.addEventListener('click', function () {
-        let count = Number(num.innerText)
-        count = count - 1;
+    // minusBtn.addEventListener('click', function () {
+    //     let count = Number(num.innerText)
+    //     count = count - 1;
+    //     num.innerText = count;
+    // })
+
+    ////////////////////////////////////////////////////////////
+    //20220809 
+    // 01. 함수형
+    //현재 화면에 출력되는 값
+    // let count = Number(num.innerText);
+
+    // //+버튼 클릭 시
+    // function plusCount() {
+    //     count = count + 1;
+    //     num.innerText = count;
+    // };
+
+    //-버튼 클릭 시 (최소수량 1개 / 이하는 비활성화)
+    // function minusCount() {
+    //     if (count > 0) {
+    //         count = count - 1;
+    //         num.innerText = count;
+    //     } else if (count == 0) {
+    //         alert("장바구니의 최소수량은 1개입니다.")
+    //         minusBtn.disabled = true;
+    //         minusBtn.style = "background-color:#ccc"
+    //     }
+    // };
+
+    // 02. 화살표 함수
+    let plusCount = () => {
+        count = count + 1;
         num.innerText = count;
-    })
+    }
+
+    let minusCount = () => {
+        if (count > 0) {
+            count = count - 1;
+            num.innerText = count;
+        } else if (count == 0) {
+            alert("0개 미만은 장바구니에 담을 수 없습니다.")
+        }
+    }
+
+    plusBtn.addEventListener('click', plusCount);
+    minusBtn.addEventListener('click', minusCount);
+
 </script>
 
 </html>
