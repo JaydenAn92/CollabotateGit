@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Counter</title>
+    <link rel="stylesheet" type="text/css" href="./css/ex01.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <p class="numTxt"></p>
+        <button class="cntBtn plus" type="button">+1</button>
+        <button class="cntBtn minus" type="button">-1</button>
+    </div>
+
+    <script>
+        var cnt = 0;
+        $(".wrap .numTxt").text(cnt); //cnt=0 출력
+        $(".wrap .cntBtn").on("click", function() { //버튼 클릭시
+            if ($(this).hasClass("plus")) { //플러스 버튼 클릭 시
+                cnt++;
+            } else { //그 외 버튼 클릭 시 (버튼이 3개 초과시 변경 필요)
+                cnt--;
+            }
+            $(".wrap .numTxt").text(cnt);
+        });
+    </script>
+</body>
+
+</html>
