@@ -88,8 +88,22 @@
         }
     }
 
+    // disabled 활성화(최대수량 10으로 했을 때 비활성화 → 10 이하로 가면 다시 활성화로 풀리기)
+    let plusActive = () => {
+        plusBtn.disabled = false;
+        plusBtn.style = "background-color: none"
+    }
+    // disabled 활성화(최소수량 0으로 했을 때 비활성화 → 1 이상으로 가면 다시 활성화로 풀리기)
+    let minusActive = () => {
+        minusBtn.disabled = false;
+        minusBtn.style = "background-color: none"
+    }
+
     plusBtn.addEventListener('click', plusCount);
+    plusBtn.addEventListener('click', minusActive);
     minusBtn.addEventListener('click', minusCount);
+    minusBtn.addEventListener('click', plusActive);
+
 </script>
 
 </html>
