@@ -1,0 +1,24 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+/* count css */
+
+.count_wrap {
+    padding: 20px;
+}
+#result { 
+    margin-bottom: 10px;
+    font-size: 40px; 
+    font-weight: bold; 
+    color: blue;
+}
+.count_btn input { 
+    width: 100px; 
+    height: 50px; 
+    background-color: #fff;
+    border-radius: 30px; 
+    text-align: center;
+    font-size: 20px;
+}
