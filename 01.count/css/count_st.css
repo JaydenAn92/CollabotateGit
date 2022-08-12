@@ -27,10 +27,29 @@ ul {
     word-break: break-all;
 }
 
+
+input,
+textarea,
 button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     vertical-align: middle;
     border: none;
     border-radius: 0;
+}
+
+input {
+    text-align: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .blind {

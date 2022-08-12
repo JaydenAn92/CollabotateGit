@@ -8,13 +8,21 @@
 </head>
 
 <body>
-    <!--count plus & minus -->
+    <!-- 01. count plus & minus -->
     <div class="inner">
         <button type="button" id="minus"><span class="blind">빼기</span></button>
         <span id="result">0</span>
         <button type="button" id="plus"><span class="blind">더하기</span></button>
     </div>
-    <!--//count plus & minus -->
+    <!-- //01. count plus & minus -->
+
+    <!-- 02. input plus & minus -->
+    <div class="inner">
+        <button type="button" id="minus"><span class="blind">빼기</span></button>
+        <input type="text" value="1" id="result" min="1" max="10">
+        <button type="button" id="plus"><span class="blind">더하기</span></button>
+    </div>
+    <!-- //02. input plus & minus -->
 </body>
 
 <script>
@@ -98,7 +106,6 @@
         minusBtn.disabled = false;
         minusBtn.style = "background-color: none"
     }
-
 
     plusBtn.addEventListener('click', plusCount);
     plusBtn.addEventListener('click', minusActive);
