@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion of units</title>
+    <link rel="stylesheet" href="css/unit.css">
+</head>
+
+<body>
+    <div class="tab_wrap">
+        <ul>
+            <li data-tab="tab01">
+                <a href="#">무게</a>
+            </li>
+            <li data-tab="tab02">
+                <a href="#">넓이</a>
+            </li>
+        </ul>
+        <div id="tab01" class="tab_content">
+            <div>
+                <label for="unit01">입력값</label>
+                <input type="text" id="unit01"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                <select id="inSel01">
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                    <option value="t">t</option>
+                </select>
+            </div>
+            <div>
+                <span>↓</span>
+            </div>
+            <div>
+                <label for="unit02">변환값</label>
+                <input type="text" id="unit02"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                <select id="outSel01">
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                    <option value="t">t</option>
+                </select>
+            </div>
+            <button id="convert_btn01">변환</button>
+        </div>
+        <div id="tab02" class="tab_content">
+            <div>
+                <label for="unit03">입력값</label>
+                <input type="text" id="unit03"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                <select id="inSel02">
+                    <option value="㎡">㎡</option>
+                    <option value="평">평</option>
+                </select>
+            </div>
+            <div>
+                <span>↓</span>
+            </div>
+            <div>
+                <label for="unit04">변환값</label>
+                <input type="text" id="unit04"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                <select id="outSel02">
+                    <option value="㎡">㎡</option>
+                    <option value="평">평</option>
+                </select>
+            </div>
+            <button id="convert_btn02">변환</button>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/unit.js"></script>
+
+</html>

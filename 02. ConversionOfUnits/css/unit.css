@@ -1,0 +1,111 @@
+body,
+button,
+div,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+    word-break: break-all;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+input {
+    text-align: center;
+}
+
+input:-internal-autofill-selected {
+    background-color: none !important;
+}
+
+.tab_wrap {
+    width: 800px;
+    margin: 100px auto;
+}
+
+.tab_wrap ul {
+    overflow: hidden;
+}
+
+.tab_wrap ul li {
+    float: left;
+    width: 50%;
+    padding: 15px 0;
+    border-radius: 25px 25px 0 0;
+    text-align: center;
+    box-sizing: border-box;
+    border-collapse: separate;
+    background-color: aliceblue;
+}
+
+.tab_wrap ul li a {
+    display: inline-block;
+    width: 100%;
+    color: rgb(121, 121, 211);
+    transition: 0.3s;
+}
+
+.tab_content {
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+.tab_content.current {
+    background-color: aliceblue;
+    display: block;
+}
+
+.tab_content div+div {
+    margin-top: 15px;
+}
+
+.tab_content div label {
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.tab_content div input {
+    height: 30px;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+.tab_content div select {
+    height: 30px;
+    margin-left: 10px;
+}
+
+.tab_content button {
+    width: 40%;
+    height: 30px;
+    margin-top: 60px;
+    background-color: rgb(176, 176, 238);
+    color: #fff;
+    border: none;
+    line-height: 30px;
+}
