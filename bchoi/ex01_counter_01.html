@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -13,22 +13,85 @@
 <body>
 
     <div class="wrap">
-        <p class="numTxt"></p>
-        <button class="cntBtn plus" type="button">+1</button>
-        <button class="cntBtn minus" type="button">-1</button>
+        <p class="numTxt" id="cnt"></p>
+        <button class="cntBtn cntPlus" id="plus" type="button">+1</button>
+        <button class="cntBtn cntMinus" id="minus" type="button">-1</button>
     </div>
 
     <script>
+        // 1.
         var cnt = 0;
         $(".wrap .numTxt").text(cnt); //cnt=0 출력
         $(".wrap .cntBtn").on("click", function() { //버튼 클릭시
-            if ($(this).hasClass("plus")) { //플러스 버튼 클릭 시
+            if ($(this).hasClass("cntPlus")) { //플러스 버튼 클릭 시
                 cnt++;
-            } else if ($(this).hasClass("minus")) { //플러스 버튼 클릭 시
+            } else if ($(this).hasClass("cntMinus")) { // 마이너스 버튼 클릭 시
                 cnt--;
             }
             $(".wrap .numTxt").text(cnt);
         });
+
+
+        // 2.
+        // let cnt = 0;
+        // $(".wrap .numTxt").text(cnt); //cnt=0 출력
+
+        // count = (curr) => {
+        //     if (curr == "plus") {
+        //         cnt++;
+        //     } else if (curr == "minus") {
+        //         cnt--;
+        //     }
+        // }
+
+        // $(".wrap .cntBtn").on("click", function() { //버튼 클릭시
+        //     var currBtn = $(this).attr("id");
+        //     count(currBtn);
+        //     $(".wrap .numTxt").text(cnt);
+        // });
+
+
+        // 3.
+        // let cnt = document.getElementById("cnt");
+        // let counter = 0;
+        // let plus = document.getElementById("plus");
+        // let minus = document.getElementById("minus");
+
+        // cnt.innerHTML = counter;
+        // plus.addEventListener("click", function() {
+        //     counter++;
+        //     cnt.innerHTML = counter;
+        // });
+        // minus.addEventListener("click", function() {
+        //     counter--;
+        //     cnt.innerHTML = counter;
+        // });
+
+
+        // 4
+        // let cnt = 0;
+        // let numTxt = document.getElementById("cnt");
+        // let plus = document.getElementById("plus");
+        // let minus = document.getElementById("minus");
+        // let type = "";
+        // numTxt.innerText = cnt;
+        // count = (curr) => {
+        //     if (curr == "plus") {
+        //         cnt++;
+        //     } else if (curr == "minus") {
+        //         cnt--;
+        //     }
+        // }
+        // plus.addEventListener("click", function() {
+        //     type = "plus";
+        //     count(type);
+        //     numTxt.innerHTML = cnt;
+        // });
+        // minus.addEventListener("click", function() {
+        //     type = "minus";
+        //     count(type);
+        //     numTxt.innerHTML = cnt;
+        // });
     </script>
 </body>
 
