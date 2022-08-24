@@ -6,10 +6,6 @@
     justify-content: center;
 }
 
-.container:first-child {
-    margin-top: 0;
-}
-
 .box {
     position: relative;
     text-align: center;
