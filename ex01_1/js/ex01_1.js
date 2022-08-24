@@ -80,7 +80,7 @@ function checkConvert(input,output){
     } else if(!inputValue) {
         alert("변환하고자하는 입력값을 입력해주세요.")
     } else {
-        // 220824 if문 -> switch-case 문으로 구조 변경                
+        // 22.08.24 if문 -> switch-case 문으로 구조 변경
         if(input == output ) {
             alert("입력값, 변환값을 동일하게 선택하였습니다. \n서로 다른 단위를 선택해주세요.")
         } else {
