@@ -1,17 +1,50 @@
 //jquery 
 // tab 클릭 시 
-$(function () {
-    $('.tab_wrap ul li').click(function () {
-        var activeTab = $(this).attr('data-tab');
-        console.log(this);
-        $('.tab_wrap ul li').removeClass('current');
-        $('.tab_content').removeClass('current');
-        $(this).addClass('current');
-        $('#' + activeTab).addClass('current');
-    })
-});
+// $(function () {
+//     $('.tab_wrap ul li').click(function () {
+//         var activeTab = $(this).attr('data-tab');
+//         $('.tab_wrap ul li').removeClass('current');
+//         $('.tab_content').removeClass('current');
+//         $(this).addClass('current');
+//         $('#' + activeTab).addClass('current');
+//     })
+// });
 
-//20220823 tab 클릭 시 jquery → script 변경
+//20220825 tab 클릭 시 jquery → script 변경
+
+const tabMenu = document.querySelectorAll('.tab_wrap ul li');
+const tabContent = document.querySelectorAll('.tab_content')
+const isOn = 'current'; 
+
+function activeTab(){
+    //반복을 위한 forEach문 사용
+    tabMenu.forEach((tabOn) => {
+        tabOn.addEventListener('click',function(e){
+            //클릭한 tab의 data-tab 속성을 변수로 사용
+            let activeTab = tabOn.getAttribute('data-tab');
+            //클릭한 tabMenu에 맞는 tabContent 들고오기 위한 
+            ActiveContent(activeTab);
+        })
+    });
+}
+
+function ActiveContent(activeTab){
+    tabContent.forEach((contentOn) => {
+        //현시점 tabContent 이면서 current 클래스가 있는 경우 그 tabContent에 current 클래스 제거
+        if(contentOn && contentOn.classList.contains(isOn)){
+            console.log(contentOn);
+            contentOn.classList.remove(isOn);
+        }
+        //클릭한 tabContent의 data-tab 속성을 변수로 사용
+        let activeContent = contentOn.getAttribute('data-tab');
+        //tabMenu의 data-tab 과 tabContent의 data-tab이 같은 경우 current 클래스 추가
+        if (activeContent === activeTab) {
+                contentOn.classList.add(isOn);
+        }
+    });
+}
+activeTab();
+
 
 //script
 //무게
