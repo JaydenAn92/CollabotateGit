@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>input type range</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div>
+      <input type="range" name="" min="1" max="100" id="slide" />
+      <h4 id="output"></h4>
+    </div>
+
+    <script>
+      const slide = document.querySelector("#slide");
+      const output = document.querySelector("#output");
+			//output 함수
+      const showValue = () => {
+        output.textContent = slide.value;
+			};
+			// input 변경시 함수 실행			
+      slide.output = () => {
+        showValue();
+			};
+			// 초기 함수 실행
+      showValue();
+    </script>
+  </body>
+</html>

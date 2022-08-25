@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
     <title>Conversion of units</title>
-</head>
-<body>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
     <div>
       <label for="weight">무게</label>
       <input type="radio" name="unitName" id="weight" class="chkType" checked />
@@ -33,5 +31,84 @@
         <option data-type="area" value="">평</option>
       </select>
     </div>
-</body>
+    <script>
+      const inputUnit = document.getElementById("unit");
+      const outputUnit = document.getElementById("output");
+      const unitSelect = document.getElementById("unitSelect");
+      const outputSelect = document.getElementById("outputSelect");
+      const typesCheckbox = document.getElementsByClassName("chkType");
+      const typeSeleclt = document.getElementsByClassName("typeSeleclt");
+      const inputs = [inputUnit, outputUnit];
+      const selects = [unitSelect, outputSelect];
+      const Unit = (items) => {
+        for (var item of items) {
+          item.addEventListener("input", (e) => {
+            console.log(e)
+            e.target.value = e.target.value.replace(/[^0-9]/g,'');
+            let CV = e.target.value;
+            let type = e.target.id;
+            switch (type) {
+              case "unit":
+                outputUnit.value = CV;
+                break;
+              case "output":
+                inputUnit.value = CV;
+                break;
+            }
+          });
+        }
+      };
+      // 반복되는 함수 selectlist
+      const selectlist = (items, type) => {
+        for (var item of items) {
+          // 반복되는 함수 looplist
+          let looplist = (lists, type) => {
+            let checkSel = true;
+            for (let i = 0; i < lists.length; i++) {
+              let eType = lists[i].getAttribute("data-type");
+              lists[i].removeAttribute("selected"); // selected 전체 삭제
+              if (type === eType) {
+                if (checkSel) { // 동일한 리스트 첫번째 리스트 선택
+                  var CA = lists[i].hasAttribute("selected");
+                  if (!CA) {
+                    lists[i].setAttribute("selected", true);
+                  }
+                  checkSel = false;
+                }
+                lists[i].style.display = "block";
+              } else {
+                lists[i].style.display = "none";
+              }
+            }
+          };
+          switch (type) {
+            case "weight":
+              looplist(item.children, type);
+              break;
+            case "area":
+              looplist(item.children, type);
+              break;
+          }
+        }
+      };
+
+      const typeCheck = (items) => {
+        for (let item of items) {
+          item.addEventListener("change", function () {
+            let typeChk = this.id;
+            switch (typeChk) {
+              case "weight":
+                selectlist(typeSeleclt, typeChk);
+                break;
+              case "area":
+                selectlist(typeSeleclt, typeChk);
+                break;
+            }
+          });
+        }
+      };
+      typeCheck(typesCheckbox);
+      Unit(inputs);
+    </script>
+  </body>
 </html>
