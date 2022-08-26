@@ -16,11 +16,11 @@
         <div class="container">
             <div class="box">
                 <label for="rdoWeight">무게</label>
-                <input type="radio" name="rdo" class="inputRdo" id="rdoWeight" data-value="selectWeight" checked>
+                <input type="radio" name="rdo" class="inputRdo" id="rdoWeight" value="selectWeight" checked>
             </div>
             <div class="box">
                 <label for="rdoWidth">면적</label>
-                <input type="radio" name="rdo" class="inputRdo" id="rdoWidth" data-value="selectWidth">
+                <input type="radio" name="rdo" class="inputRdo" id="rdoWidth" value="selectWidth">
             </div>
         </div>
 
@@ -74,69 +74,55 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    var num = 0;
-    var input = "";
-    var selectOpt01 = "";
-    var selectOpt02 = "";
-
-    $("input[type='radio']").on("click", function() {
-        var rdo = $(this).attr("data-value");
+    $("input[type='radio']").on("click", function() { // 라디오 버튼 클릭 시
+        var rdo = $(this).attr("value"); // 클릭한 라디오 버튼의 value값(셀렉트 ID와 동일함)
         $(".box.selectBox").removeClass("on")
         $("#" + rdo).addClass("on");
     });
 
-    $("#selectWeight select").on("change", function() {
-        num = 0;
-        input = $("#inputVal").val();
-        selectOpt01 = $("#selectWeight .conversion01").val();
-        selectOpt02 = $("#selectWeight .conversion02").val();
-        switch (selectOpt02) {
-            case "g":
-                switch (selectOpt01) {
-                    case "g":
+    $("#selectWeight select").on("change", function() { //단위 변환(무게) 셀렉트 변경 시
+        var num = 0;
+        var input = $("#inputVal").val(); //입력값
+        var selectOpt01 = $("#selectWeight .conversion01").val(); //입력값 타입
+        var selectOpt02 = $("#selectWeight .conversion02").val(); // 출력값 타입
+        switch (selectOpt01) {
+            case "g": //입력값 단위 : g
+                switch (selectOpt02) {
+                    case "g": // 출력값 단위 : g
                         num = input * 1;
-                        console.log("1::" + num);
                         break;
-                    case "kg":
+                    case "kg": // 출력값 단위 : kg
                         num = input * 0.001;
-                        console.log("2::" + num);
                         break;
-                    case "t":
+                    case "t": // 출력값 단위 : t
                         num = input * 0.000001;
-                        console.log("3::" + num);
                         break;
                 }
                 break;
-            case "kg":
+            case "kg": //입력값 단위 : kg
                 $(".inputBox .unit").text("kg");
-                switch (selectOpt01) {
-                    case "g":
+                switch (selectOpt02) {
+                    case "g": // 출력값 단위 : g
                         num = input * 1000;
-                        console.log("4::" + num);
                         break;
-                    case "kg":
+                    case "kg": // 출력값 단위 : kg
                         num = input * 1;
-                        console.log("5::" + num);
                         break;
-                    case "t":
+                    case "t": // 출력값 단위 : t
                         num = input * 0.001;
-                        console.log("6::" + num);
                         break;
                 }
                 break;
-            case "t":
-                switch (selectOpt01) {
-                    case "g":
+            case "t": //입력값 단위 : t
+                switch (selectOpt02) {
+                    case "g": // 출력값 단위 : g
                         num = input * 1000000;
-                        console.log("7::" + num);
                         break;
-                    case "kg":
+                    case "kg": // 출력값 단위 :kg
                         num = input * 1000;
-                        console.log("8::" + num);
                         break;
-                    case "t":
+                    case "t": // 출력값 단위 : t
                         num = input * 1;
-                        console.log("9::" + num);
                         break;
                 }
                 break;
@@ -146,40 +132,35 @@
 
     });
 
-    $("#selectWidth select").on("change", function() {
-        num = 0;
-        input = $("#inputVal").val();
-        selectOpt01 = $("#selectWidth .conversion01").val();
-        selectOpt02 = $("#selectWidth .conversion02").val();
-        console.log("#selectWidth select");
-        switch (selectOpt02) {
-            case "m2":
-                switch (selectOpt01) {
-                    case "m2":
+    $("#selectWidth select").on("change", function() { //단위 변환(너비) 셀렉트 변경 시
+        var num = 0;
+        var input = $("#inputVal").val(); //입력값
+        var selectOpt01 = $("#selectWidth .conversion01").val(); //입력값 타입
+        var selectOpt02 = $("#selectWidth .conversion02").val(); //출력값 타입
+        switch (selectOpt01) {
+            case "m2": //입력값 단위 : ㎡ 
+                switch (selectOpt02) {
+                    case "m2": //출력값 단위 : ㎡ 
                         num = input * 1;
-                        console.log("10::" + num);
                         break;
-                    case "p":
+                    case "p": // 출력값 단위 : 평
                         num = input * 0.3025;
-                        console.log("11::" + num);
                         break;
                 }
                 break;
-            case "p":
-                switch (selectOpt01) {
-                    case "m2":
+            case "p": //입력값 단위 : 평
+                switch (selectOpt02) {
+                    case "m2": //출력값 단위 : ㎡ 
                         num = input * 3.3058;
-                        console.log("12::" + num);
                         break;
-                    case "p":
+                    case "p": // 출력값 단위 : 평
                         num = input * 1;
-                        console.log("13::" + num);
                         break;
                 }
                 break;
         }
-        $("#outputVal").val(num);
-        $(".box .unit").text(selectOpt02);
+        $("#outputVal").val(num); //출력값에 적용
+        $(".box .unit").text(selectOpt02); //출력값 단위
     });
 </script>
 
