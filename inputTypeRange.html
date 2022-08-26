@@ -29,10 +29,8 @@
 
         // 20220826 
         // 작업 내용 : 변경되는 output이 화면에 나오도록
-        let range = document.querySelector(`input[type = 'range']`);
-
         // range 동그라미를 위치 다른 곳에 클릭 시 새로운 range의 값이 나타나도록
-        range.addEventListener('change', () => {
+        slide.addEventListener('change', () => {
             output.innerHTML = `${slide.value}`;
         })
     </script>
