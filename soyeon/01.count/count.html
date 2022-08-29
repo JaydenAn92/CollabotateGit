@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/count_style.css">
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="count_wrap">
+        <div id="result">0</div>
+        <div class="count_btn">
+            <input type='button' onclick='count("minus")' value='-1'/>
+            <input type='button' onclick='count("plus")' value='+1'/>
+        </div>
+    </div>
+
+
+    <script>
+
+        function count(type) {
+            // 결과를 표시할 element 
+            const resultElement =  document.getElementById('result');
+
+            // 현재 화면에 표시된 값
+            let number = resultElement.innerText;
+
+            // + 더하기 / - 빼기
+            if(type === 'plus'){
+                number = parseInt(number) + 1;
+            }else if(type === 'minus'){
+                number = parseInt(number) - 1;
+            }
+
+            resultElement.innerText = number;
+        }
+
+    </script>
+
+
+
+</body>
+</html>
