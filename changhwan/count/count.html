@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" type="text/css" href="/changhwan/count/count.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <!-- Javascript -->
+            <div class="count">
+                <h1>Counter</h1>
+                <span id="result">0</span>
+                <div class="count_btn">
+                    <button class="down_btn" onclick='count("down")'>DOWN</button>
+                    <button class="up_btn" onclick='count("up")'>UP</button>
+                </div>
+            </div>
+
+            <!-- Jquery -->
+            <div class="count_q">
+                <h2>Counter_JQ</h2>
+                <span class="result_q">0</span>
+                <div class="count_btn_q">
+                    <a href="#" id="minus" class="minus">-</a>
+                    <a href="#" id="plus" class="plus">+</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/changhwan/count/count.js"></script>
+</body>
+</html>
