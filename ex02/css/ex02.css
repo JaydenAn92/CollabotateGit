@@ -1,0 +1,15 @@
+/* common */
+.section { max-width: 1024px; margin: 0 auto; }
+a { text-decoration: none; color:#333;}
+ul { list-style: none; padding: 0; border-top:1px solid #333; }
+ul li a { color:#333; display: block; padding:10px 5px; border-bottom: 1px solid #333; }
+ul li a:hover { color:#fff; background: #333; }
+button { border:1px solid #333; color:#333; border-radius: 10px; padding: 10px; font-weight: bold; cursor: pointer; }
+
+/* style */
+.btn-wrap{ display: flex; justify-content: center; margin: 10px 0;}
+.btn-wrap .btn{ width: 20%; background-color: beige; color:#888; border-color: #888; margin:0 10px;}
+.btn-wrap .btn.active{background: #555; color:#fff; border:0;}
+.input-box-wrap {display: flex; justify-content: center; align-items: center; }
+.input-box-wrap input {width: 50%; margin:10px 5px;}
+.input-box-wrap a { width: 30px; text-align: center; border:1px solid #888; background-color: beige; margin-left:5px; }
