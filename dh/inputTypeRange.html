@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>input type range</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div>
+        <input type="range" name="" min="1" max="100" id="slide" />
+        <h4 id="output"></h4>
+    </div>
+
+    <script>
+        const slide = document.querySelector("#slide");
+        const output = document.querySelector("#output");
+        // output 함수
+        const showValue = () => {
+            output.textContent = slide.value;
+        };
+        // input 변경시 함수 실행			
+        slide.output = () => {
+            showValue();
+        };
+        // 초기 함수 실행
+        showValue();
+
+
+        // 20220826 
+        // 작업 내용 : 변경되는 output이 화면에 나오도록
+        // range 동그라미를 위치 다른 곳에 클릭 시 새로운 range의 값이 나타나도록
+        slide.addEventListener('change', () => {
+            output.innerHTML = `${slide.value}`;
+        })
+    </script>
+</body>
+
+</html>

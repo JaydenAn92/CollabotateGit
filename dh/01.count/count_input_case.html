@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+    <link rel="stylesheet" href="css/count_st.css">
+</head>
+
+<body>
+    <!-- 02. input plus & minus -->
+    <div class="inner">
+        <button type="button" id="minus"><span class="blind">빼기</span></button>
+        <input type="number" value="1" id="result" min=1 max=10
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+        <button type="button" id="plus"><span class="blind">더하기</span></button>
+    </div>
+    <!-- //02. input plus & minus -->
+</body>
+
+<script>
+    const num = document.getElementById('result');
+    const minusBtn = document.getElementById('minus');
+    const plusBtn = document.getElementById('plus');
+
+    let count = Number(num.value);
+
+    function plusCount() {
+        count = count + 1;
+        num.value = count;
+        if (count >= 10) {
+            alert("장바구니의 최대수량은 10개입니다.")
+            plusBtn.disabled = true;
+            plusBtn.style = "background-color:#ccc"
+        }
+    };
+
+    function minusCount() {
+        if (count > 0) {
+            count = count - 1;
+            num.value = count;
+        } else if (count == 0) {
+            alert("장바구니의 최소수량은 1개입니다.")
+            minusBtn.disabled = true;
+            minusBtn.style = "background-color:#ccc"
+        }
+    };
+
+    // disabled 활성화(최대수량 10으로 했을 때 비활성화 → 10 이하로 가면 다시 활성화로 풀리기)
+    plusActive = () => {
+        plusBtn.disabled = false;
+        plusBtn.style = "background-color: none"
+    }
+    // disabled 활성화(최소수량 0으로 했을 때 비활성화 → 1 이상으로 가면 다시 활성화로 풀리기)
+    minusActive = () => {
+        minusBtn.disabled = false;
+        minusBtn.style = "background-color: none"
+    }
+
+    plusBtn.addEventListener('click', plusCount);
+    plusBtn.addEventListener('click', minusActive);
+    minusBtn.addEventListener('click', minusCount);
+    minusBtn.addEventListener('click', plusActive);
+
+
+
+</script>
+
+</html>

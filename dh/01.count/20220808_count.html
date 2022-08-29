@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+    <link rel="stylesheet" href="css/count_st.css">
+</head>
+
+<body>
+    <!-- 01. count plus & minus -->
+    <div class="inner">
+        <button type="button" id="minus"><span class="blind">빼기</span></button>
+        <span id="result">0</span>
+        <button type="button" id="plus"><span class="blind">더하기</span></button>
+    </div>
+    <!-- //01. count plus & minus -->
+
+    <!-- 02. input plus & minus -->
+    <div class="inner">
+        <button type="button" id="minus"><span class="blind">빼기</span></button>
+        <input type="text" value="1" id="result" min="1" max="10">
+        <button type="button" id="plus"><span class="blind">더하기</span></button>
+    </div>
+    <!-- //02. input plus & minus -->
+</body>
+
+<script>
+    const num = document.getElementById('result');
+    const minusBtn = document.getElementById('minus');
+    const plusBtn = document.getElementById('plus');
+
+    //20220808
+    //+버튼 클릭 시 result 부분 증가
+    // plusBtn.addEventListener('click', function () {
+    //     let count = Number(num.innerText)
+    //     count = count + 1;
+    //     num.innerText = count;
+    // })
+
+    //-버튼 클릭 시 result 부분 감소
+    // minusBtn.addEventListener('click', function () {
+    //     let count = Number(num.innerText)
+    //     count = count - 1;
+    //     num.innerText = count;
+    // })
+
+    ////////////////////////////////////////////////////////////
+    //20220809 ~ 20220810
+    // 01. 함수형
+    //현재 화면에 출력되는 값
+    let count = Number(num.innerText);
+
+    // //+버튼 클릭 시 (최대수량 10개 / 이상은 비활성화)
+    // function plusCount() {
+    //     count = count + 1;
+    //     num.innerText = count;
+    //     if (count >= 10) {
+    //         alert("장바구니의 최대수량은 10개입니다.")
+    //         plusBtn.disabled = true;
+    //         plusBtn.style = "background-color:#ccc"
+    //     }
+    // };
+
+    //-버튼 클릭 시 (최소수량 1개 / 이하는 비활성화)
+    // function minusCount() {
+    //     if (count > 0) {
+    //         count = count - 1;
+    //         num.innerText = count;
+    //     } else if (count == 0) {
+    //         alert("장바구니의 최소수량은 1개입니다.")
+    //         minusBtn.disabled = true;
+    //         minusBtn.style = "background-color:#ccc"
+    //     }
+    // };
+
+    // 02. 화살표 함수
+    plusCount = () => {
+        count = count + 1;
+        num.innerText = count;
+        if (count >= 10) {
+            alert("장바구니의 최대수량은 10개입니다.")
+            plusBtn.disabled = true;
+            plusBtn.style = "background-color:#ccc"
+        }
+    }
+
+    minusCount = () => {
+        if (count > 0) {
+            count = count - 1;
+            num.innerText = count;
+        } else if (count == 0) {
+            alert("장바구니의 최소수량은 1개입니다.")
+            minusBtn.disabled = true;
+            minusBtn.style = "background-color:#ccc"
+        }
+    }
+
+    // disabled 활성화(최대수량 10으로 했을 때 비활성화 → 10 이하로 가면 다시 활성화로 풀리기)
+    plusActive = () => {
+        plusBtn.disabled = false;
+        plusBtn.style = "background-color: none"
+    }
+    // disabled 활성화(최소수량 0으로 했을 때 비활성화 → 1 이상으로 가면 다시 활성화로 풀리기)
+    minusActive = () => {
+        minusBtn.disabled = false;
+        minusBtn.style = "background-color: none"
+    }
+
+    plusBtn.addEventListener('click', plusCount);
+    plusBtn.addEventListener('click', minusActive);
+    minusBtn.addEventListener('click', minusCount);
+    minusBtn.addEventListener('click', plusActive);
+
+</script>
+
+</html>
