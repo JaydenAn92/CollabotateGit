@@ -1,0 +1,42 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+.container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    position: relative;
+    text-align: center;
+}
+
+.box.inputBox label,
+.box.outPutBox label {
+    display: block;
+    ;
+}
+
+.box.inputBox input,
+.box.outPutBox input {
+    padding: 5px 15px 5px;
+}
+
+.box.outPutBox {
+    margin-left: 10px;
+}
+
+.box .unit {
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    font-size: 15px;
+}
+
+.selectBox {
+    display: none;
+}
+
+.selectBox.on {
+    display: block;
+}

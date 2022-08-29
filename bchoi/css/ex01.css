@@ -1,0 +1,23 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+.numTxt {
+    font-size: 50px;
+}
+
+.wrap {
+    text-align: center;
+}
+
+.wrap .cntBtn {
+    margin-right: 10px;
+    width: 50px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.wrap .cntBtn:first-child {
+    margin-right: 0;
+}
+
+.cntBtn:hover {
+    box-shadow: 0 0 3px 3px rgba(29, 155, 228, .5);
+}
