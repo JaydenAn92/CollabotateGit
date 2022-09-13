@@ -1,0 +1,62 @@
+/* common */
+body,
+button,
+div,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+    word-break: break-all;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: 0 none;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer
+}
+
+.blind {
+    position: absolute;
+    z-index: -10;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    font-size: medium;
+    line-height: normal;
+    word-break: break-all;
+}
