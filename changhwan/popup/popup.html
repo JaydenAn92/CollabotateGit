@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="/changhwan/popup/popup.css">
+	<script src="/changhwan/popup/js/jquery-3.6.1.min.js"></script>
+		<style>
+			/* reset */
+			* {padding: 0;margin: 0;box-sizing: border-box;}
+			a {text-decoration: none;}
+			.blind {position: absolute;overflow: hidden;width: 1px;height: 1px;margin: 0;padding: 0;clip: rect(0,0,0,0);border: 0;}
+			
+			/* popup */
+			.wrap {margin-top: 100px;}
+			.content {width: 1200px;margin: 0 auto;text-align: center;}
+			.show_btn {margin-top: 30px;}
+			.show_btn .show {background-color: #0080ff;color: #fff;border: 0;border-radius: 3px;padding: 8px 8px;}
+			.show {opacity: 1;z-index: 1000;transition: all 0.5s;}
+			.popup {display: none;position: absolute;top: 60%;left: 50%;width: 500px;height: 700px;transform: translate(-50%, -50%);background-color: #fff;box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);border-radius: 5px;}
+			.popup:after {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.3);z-index: 100;}
+			.pop_wrap {position: relative;width: 100%;height: 100%;}
+			.pop_header {display: flex;justify-content: center;align-items: center;margin-top: 20px;}
+			.pop_header img {width: 50px;height: 50px;}
+			.pop_header .pop_title {margin-left: 20px;}
+			.pop_body {margin-top: 40px;}
+			.pop_body .layer_body {padding: 0 50px;}
+			.pop_body .con_text {margin-top: 20px;}
+			.pop_body .con_text strong {font-size: 24px;}
+			.pop_body .con_text p {margin-top: 10px;}
+			.link {text-align: right;margin-top: 20px;}
+			.pop_close {display: block;position: absolute;top: 0;right: 20px;z-index: 100;}
+			.pop_close a {display: inline-block;position: relative;width: 24px;height: 24px;background: url(/changhwan/popup/img/ico_close.png) no-repeat 50% 50%;background-size: 24px 24px;}
+		</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="content">
+			<h1>팝업창열기</h1>
+			<div class="show_btn">
+				<a href="#show_pop" class="show">SHOW</a>
+			</div>
+		</div>
+		<div class="popup">
+			<div class="pop_wrap">
+				<div class="pop_header">
+					<img src="/changhwan/popup/img/pngwing.png" alt="게시판 아이콘">
+					<div class="pop_title">
+						<h2>popup title</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+					</div>
+				</div>
+				<div class="pop_body">
+					<div class="layer_body scrollbar">
+						<div class="con_text">
+							<strong>sub_title01</strong>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, esse laboriosam saepe enim tempora
+								architecto fugit pariatur quia quibusdam asperiores ipsam quo amet. Quis quam magni officia, illum quidem
+								iste consequatur quibusdam voluptatum nostrum. Quaerat cumque fuga perspiciatis repellat sit minus maxime
+								natus, officia in magni possimus earum, enim eligendi doloremque ipsum quisquam vel omnis, ea voluptatibus
+								a laboriosam impedit! Quod iste est, consequuntur doloribus neque eaque deleniti ut voluptas similique
+								quia suscipit quos nam, vero, iure assumenda asperiores praesentium odio aut! Dolore explicabo quibusdam
+								dolores iure cum illo consectetur suscipit aut! Corporis vitae nam eos animi possimus. Earum, aspernatur.
+							</p>
+						</div>
+						<div class="con_text">
+							<strong>sub_title02</strong>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, esse laboriosam saepe enim tempora
+								architecto fugit pariatur quia quibusdam asperiores ipsam quo amet. Quis quam magni officia, illum quidem
+								iste consequatur quibusdam voluptatum nostrum. Quaerat cumque fuga perspiciatis repellat sit minus maxime
+								natus, officia in magni possimus earum, enim eligendi doloremque ipsum quisquam vel omnis, ea voluptatibus
+								a laboriosam impedit! Quod iste est, consequuntur doloribus neque eaque deleniti ut voluptas similique
+								quia suscipit quos nam, vero, iure assumenda asperiores praesentium odio aut! Dolore explicabo quibusdam
+								dolores iure cum illo consectetur suscipit aut! Corporis vitae nam eos animi possimus. Earum, aspernatur.
+							</p>
+						</div>
+						<div class="link">
+							<a href="http://naver.com" title="네이버 바로가기">네이버 바로가기</a>
+						</div>
+					</div>
+				</div>
+				<div class="pop_close">
+					<a href="#" id="show_pop" title="현재 팝업 닫기">
+						<span class="blind">닫기</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// $(document).ready(function(){
+		// 	Popup Open
+		// 	$('.show').click(function(){
+		// 		$('.popup').fadeIn(0);
+		// 	});
+
+		// 	Popup Close 
+		// 	$('.popup a').click(function(){
+		// 		$('.popup').fadeOut(0);
+		// 	});
+		// });
+
+		
+
+	</script>
+</body>
+</html>
