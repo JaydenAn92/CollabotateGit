@@ -36,3 +36,6 @@ $(function(){
         $count.text($currentNumber);
     });
 });
+
+
+// ES6
