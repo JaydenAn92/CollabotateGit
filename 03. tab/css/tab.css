@@ -220,3 +220,100 @@
     font-size: 16px;
     line-height: 26px;
 }
+
+
+
+/* accord */
+.esg_cont {
+    padding: 0 40px;
+    margin: 0 auto;
+    max-width: 1460px;
+}
+
+.esg_cont .ex_img {
+    width: 100%;
+    height: 500px;
+    background-color: #ccc;
+    margin-top: 55px;
+    border-radius: 10px;
+}
+
+.esg_cont .accord_wrap {
+    margin-top: 55px;
+}
+
+.accord_wrap .list {
+    border-radius: 8px;
+    box-shadow: 2px 4px 12px 0 rgb(0 0 0 / 14%);
+    margin-bottom: 30px;
+}
+
+.accord_wrap .list .accord_btn {
+    display: block;
+    padding: 32px 60px 32px 60px;
+    font-size: 0;
+    position: relative;
+}
+
+.accord_wrap .list .accord_btn::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 70px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/btn-down-16-black.svg) center no-repeat;
+    background-size: 24px 24px;
+}
+
+.accord_wrap .list.on .accord_btn::after {
+    transform: rotate(180deg);
+}
+
+.accord_wrap .list .accord_head .accord_tit {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.accord_wrap .list .accord_content {
+    display: none;
+}
+
+.accord_wrap .list.on .accord_content {
+    display: block;
+}
+
+.accord_wrap .list .accord_content {
+    padding: 0 60px 32px 60px;
+    color: #616161;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.accord_wrap .list .accord_content .accord_text {
+    padding: 40px 0;
+    border-top: 1px solid #000;
+}
+
+.accord_content .btn_wrap {
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+
+.accord_content .btn_wrap .btn_close {
+    min-width: 154px;
+    cursor: pointer;
+    padding: 11px 31px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-radius: 26px;
+}
+
+.accord_content .btn_wrap .btn_close:hover {
+    background-color: #fa263e;
+    border: 1px solid #fa263e;
+    color: #fff;
+}
