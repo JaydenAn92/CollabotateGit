@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- get, post -->
+    <!-- get: url에 전송하는 데이터가 노출이 됨. -->
+    <!-- 전송할 수 있는 데이터 크기가 제한이 있음. -->
+    <!-- 전송하는 데이터가 url에 노출이 되기 때문에 보안에 취약할 수 있음 -->
+    <!-- 페이지 주소를 공유해야 할 때 사용할 수 있음 -->
+
+    <!-- post -->
+    <!--데이터가 노출 되지 않고, HTTP 요청의 body에 데이터를 담아서 전송 -->
+    <!-- 전송할 수 있는 데이터 크기에 제한 없음 -->
+    <!-- URL에 전송하는 데이터가 노출되지는 않지만, 결국은 개발자 도구 같은 소프트웨어를 통해서 전송하는 데이터를 확인할 수 있음 -->
+    <!-- 전송하는 데이터는 암호화하는 것이 좋습니다. 예를들어 https 프로토콜 사용. -->
+
+    <!-- target: _blank, _self, _parent, _top -->
+    <!-- html > iframe(html) > iframe(html) -->
+    <form action="./16_form_get.html" method="get" target="_blank">
+      <fieldset>
+        <legend>개인 정보</legend>
+        <div>
+          <label for="username">이름:</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div>
+          <label for="tel">연락처:</label>
+          <input type="tel" name="telephone" id="tel" />
+        </div>
+        <button type="submit">저장</button>
+      </fieldset>
+    </form>
+    <script></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- autoplay:자동실행, muted:음소서, loop:영상이 끝에 가면 처음부터 실행 -->
+    <!-- poster:영상 실행전 대표이미지  -->
+    <!-- preload: auto, metadata, none -->
+    <video
+      src="./media/video.mp4"
+      width="320px"
+      height="240px"
+      poster="./img/sample.jpeg"
+      controls
+      muted
+      loop
+    ></video>
+    <br />
+    <video src="./media/video.mp4" width="320px" height="240px" controls>
+      <track
+        kind="subtitles"
+        src="./media/video.en.vtt"
+        srclang="en"
+        label="영어"
+      />
+      <track14
+        kind="subtitles"
+        src="./media/video.de.vtt"
+        srclang="de"
+        label="독일어"
+      />
+    </video>
+    <script></script>
+  </body>
+</html>

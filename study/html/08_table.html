@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      table {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 표(table) 삽입, 행(tr) 추가, 열-셀(td, th) 추가 -->
+    <!-- 일반 테이블 -->
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>연락처</th>
+          <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>유재석</td>
+          <td>010-0000-0000</td>
+          <td>ryu@email.com</td>
+        </tr>
+        <tr>
+          <td>김종국</td>
+          <td>010-0000-0001</td>
+          <td>kim@email.com</td>
+        </tr>
+        <tr>
+          <td>송지효</td>
+          <td>010-0000-0002</td>
+          <td>song@email.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <!-- 테이블 병합 -->
+    <table>
+      <thead>
+        <tr>
+          <th>학년</th>
+          <th>반</th>
+          <th>학생수</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3">1학년</td>
+          <td>1반</td>
+          <td>18명</td>
+        </tr>
+        <tr>
+          <!-- <td>1학년</td> -->
+          <td>2반</td>
+          <td>19명</td>
+        </tr>
+        <tr>
+          <!-- <td>1학년</td> -->
+          <td>3반</td>
+          <td>18명</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">합계</td>
+          <!-- <td></td> -->
+          <td>55명</td>
+        </tr>
+      </tfoot>
+    </table>
+    <script></script>
+  </body>
+</html>

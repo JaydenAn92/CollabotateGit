@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <iframe> -->
+    <div>
+      <a href="menu1.html">메뉴1</a>
+      <a href="javascript:goToMenu('./15_iframe_menu2.html')">메뉴2</a>
+      <a href="menu3.html">메뉴3</a>
+      <a href="menu4.html">메뉴4</a>
+      <a href="menu5.html">메뉴5</a>
+    </div>
+    <div>
+      <iframe src="./15_iframe_menu1.html" id="ifrm" frameborder="0"></iframe>
+    </div>
+    <div>footer</div>
+    <script>
+      function goToMenu(path) {
+        document.getElementById("ifrm").src = path;
+      }
+    </script>
+  </body>
+</html>
