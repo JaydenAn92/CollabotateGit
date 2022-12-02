@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 자바스크립트는 숫자를 저장할 때 64비트 부동소수점을 사용해서 저장을 해요.
+      // 64비트 부동소수점을 어떻게 저장되는지는 몰라도 되지만,
+      // 64비트 부동소수점으로 저장하기 때문에 발생할 수 있는 오류에 대해서는 알아야 한다.
+      let x = 0.1;
+      let y = 0.2;
+      let z = x + y;
+      console.log(z); // 0.30000000000000004
+      // 64비트 부동소수점
+      // 컴퓨터가 모든 데이터를 2진법을 사용해서 관리.
+      // 양수(0), 음수(1)인지를 나타내는 부호를 1비트
+      // 지수부 11비트
+      // 가수부 52비트
+      // 모든 숫자 값은 2진수로 변환해서 64비트 부동소수점으로 저장하게 되요.
+      console.log(x.toString(2)); // 0.0001100110011001100110011001100110011001100110011001101
+      console.log(y.toString(2)); // 0.001100110011001100110011001100110011001100110011001101
+
+      // 16자리 이상의 정수
+      // bignumber.js 같은 오픈소스 라이브러리 사용하면 해결이 됨.
+      let big = 9999999999999999;
+      console.log(big); // 10000000000000000
+      console.log(Number.MAX_SAFE_INTEGER); // 자바스크립트에서 다룰 수 있는 최대 값 9007199254740991
+      console.log(Number.MIN_SAFE_INTEGER); // 자바스크립트에서 다룰 수 있는 최소 값 -9007199254740991
+
+      // 자바 같은 언어는 이런 오류가 없어요.
+      // int, short, long, double, bigdouble, float, decimal
+    </script>
+  </body>
+</html>

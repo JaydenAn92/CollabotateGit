@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 데이터 타입 - Object
+      // Object는 데이터를 담을 수 있는 객체
+      // 관련 있는 정보를 하나로 묶어서 관리하고 싶을 때 사용을 함.
+      // 키(key)와 값(value)을 한 쌍으로 갖는다.
+      // 사람, 자동차, 제품과 같이 하나의 값으로 표현할 수 없는 객체를 정의할 때 사용함.
+      // Object는 어떤 데이터 타입이든 담을 수 있다.
+      let person = {
+        name: "홍길동",
+        age: 27,
+        tel: "010-0000-0000",
+        address: "",
+        email: "",
+        // gender: "남",
+        // friends: [],
+        // obj: {}
+      };
+
+      let name = person.name; // 홍길동
+      console.log(name);
+      let age = person.age;
+      let tel = person.tel;
+      let address = person.address;
+      let email = person.email;
+
+      person.tel = "010-1111-1111";
+      console.log(person.tel);
+      person.gender = "남";
+
+      console.log(person);
+
+      let person2 = {};
+      person2.name = "유재석";
+      person2.age = 51;
+
+      //   let name2 = person2.name;
+      let name2 = person2["name"]; // person2.name
+      let age2 = person2["age"]; // person2.age
+
+      // 동적(실행시점, 런타임 시점)으로 Object의 특정 값을 가져와야 할 때
+      let userSelectField = "name";
+      let userSelectFieldValue = person[userSelectField]; // person["name"]
+    </script>
+  </body>
+</html>
