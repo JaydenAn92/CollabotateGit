@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 복합 선택자 */
+      /* 하나 이상의 선택자를 같이 사용하는 것 */
+
+      /* 하위 선택자 방식 */
+      /* section ul {
+        border: 1px solid black;
+      } */
+
+      /* 자식 선택자 방식 */
+      section > ul {
+        border: 1px solid black;
+      }
+
+      /* 인접 형제 선택자 */
+      /* h1 + ul {
+        background-color: blue;
+      } */
+
+      /* 일반 형제 선택자 */
+      h1 ~ ul {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div></div> -->
+    <section>
+      <p>P태그</p>
+      <ul>
+        <li>LI태그</li>
+        <li>
+          LI태그
+          <ul>
+            <li>LI태그</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <div>
+      <h1>H1태그</h1>
+      <ul>
+        <li>LI태그</li>
+      </ul>
+      <ul>
+        <li>LI태그</li>
+      </ul>
+    </div>
+    <script></script>
+  </body>
+</html>

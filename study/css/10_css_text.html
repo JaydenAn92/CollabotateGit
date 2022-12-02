@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: blue;
+      }
+
+      .text-left {
+        text-align: left;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-right {
+        text-align: right;
+      }
+
+      /* 밑줄 */
+      .underline {
+        text-decoration: underline;
+      }
+
+      /* 오버라인 */
+      .overline {
+        text-decoration: overline;
+      }
+
+      /* 가운데 라인 / 취소선 */
+      .delline {
+        text-decoration: line-through;
+      }
+
+      /* 장식선 제거 */
+      .del-decoration {
+        text-decoration: none;
+      }
+
+      /* text-decoration-style */
+      /* text-decoration-line */
+      /* text-decoration-color */
+      /* text-decoration-thickness */
+      .under-over {
+        /* text-decoration-style: dotted;
+        text-decoration-line: underline overline;
+        text-decoration-color: red;
+        text-decoration-thickness: 10px; */
+        text-decoration: dotted underline overline green 10px;
+      }
+
+      .uppercase {
+        text-transform: uppercase; /* 모든 알파벳 문자를 대문자로 변환 */
+      }
+
+      .lowercase {
+        text-transform: lowercase; /* 모든 알파벳 문자를 소문자로 변환 */
+      }
+
+      .capitalize {
+        text-transform: capitalize; /* 단어의 첫문자만 대문자로 변환 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 텍스트 장식선 -->
+    <h1 class="underline">헤더입니다.</h1>
+    <h1 class="overline">헤더입니다.</h1>
+    <h1 class="delline">헤더입니다.</h1>
+    <a href="" class="del-decoration">장식선 있는 태그</a>
+    <h1 class="text-center">헤더입니다.</h1>
+    <h1 class="text-right">헤더입니다.</h1>
+    <h1 class="under-over">밑줄과 윗줄 모두 가진 글씨</h1>
+    <!-- 텍스트의 문자를 변환 -->
+    <h1 class="uppercase">all letters are converted to uppercase.</h1>
+    <input type="text" name="" id="" class="uppercase" />
+    <h1 class="lowercase">ALL Letters Are CONVERTED To lowercase.</h1>
+    <h1 class="capitalize">
+      only the first letter of a word is converted to uppercase.
+    </h1>
+    <script>
+      // let a = "food";
+      // a.toUpperCase()
+    </script>
+  </body>
+</html>

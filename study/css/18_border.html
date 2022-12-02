@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* top, right, bottom, left */
+      /* 5px -> 4면 모두 5px */
+      /* 5px 10px 5px 10px -> top:5px, right:10px, bottom:5px, left:5px */
+      /* 5px 10px -> top,bottom:5px, right,left:10px; */
+      /* 5px 10px 7px -> top,:5px, right,left:10px; bottom:7px */
+      div {
+        border-width: 5px; /* 선 두께 */
+        /* border-width: 5px 10px 7px 8px; */
+        border-color: green yellow red blue; /* 선 색상 */
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+      }
+
+      /* 선 모양 border-style */
+      /* dashed, dotted, solid, double, groove, ridge, inset, outset */
+      .dashed {
+        border-style: dashed; /* 선 모양 */
+      }
+
+      .dotted {
+        border-style: dotted; /* 선 모양 */
+      }
+
+      .solid {
+        border-style: solid; /* 선 모양 */
+      }
+
+      .double {
+        border-style: double; /* 선 모양 */
+      }
+
+      .groove {
+        border-style: groove; /* 선 모양 */
+      }
+
+      .ridge {
+        border-style: ridge; /* 선 모양 */
+      }
+
+      .inset {
+        border-style: inset; /* 선 모양 */
+      }
+
+      .outset {
+        border-style: outset; /* 선 모양 */
+      }
+
+      /* 선 두께 border-width */
+      /* 값으로 지정: px, em, rem, cm */
+      /* 키워드: thin, medium, thick */
+      .thin {
+        border-width: thin;
+      }
+
+      .medium {
+        border-width: medium;
+      }
+
+      .thick {
+        border-width: thick;
+      }
+
+      /* border: border-width border-style border-color */
+      /* border: 3px solid red */
+
+      .radius {
+        border-radius: 25px; /* 둥근 모서리 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashed"></div>
+    <div class="dotted"></div>
+    <div class="solid radius"></div>
+    <div class="double"></div>
+    <div class="groove"></div>
+    <div class="ridge"></div>
+    <div class="inset"></div>
+    <div class="outset"></div>
+    <script></script>
+  </body>
+</html>
