@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>05_object</title>
   </head>
   <body>
     <script>
@@ -33,22 +33,30 @@
       let email = person.email;
 
       person.tel = "010-1111-1111";
-      console.log(person.tel);
+      person.address = "경기도 의정부시 호원동"
       person.gender = "남";
+      console.log(person.tel);
+      console.log(person.address);
+      console.log(person.gender);
 
-      console.log(person);
+      // console.log(person);
 
       let person2 = {};
       person2.name = "유재석";
       person2.age = 51;
+      console.log(person2);
 
-      //   let name2 = person2.name;
+      // let name2 = person2.name;
       let name2 = person2["name"]; // person2.name
       let age2 = person2["age"]; // person2.age
+      // console.log(name2);
+      console.log(name);
 
       // 동적(실행시점, 런타임 시점)으로 Object의 특정 값을 가져와야 할 때
       let userSelectField = "name";
       let userSelectFieldValue = person[userSelectField]; // person["name"]
+      console.log(userSelectField);
+      console.log(userSelectFieldValue);
     </script>
   </body>
 </html>

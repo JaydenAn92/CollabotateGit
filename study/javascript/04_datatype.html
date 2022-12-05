@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>04_datatype</title>
   </head>
   <body>
     <script>
@@ -18,19 +18,35 @@
       // 문자열 안에 홑따옴표를 사용하고 싶은 경우
       let str2 = "그는 '존'이라고 불립니다.";
 
-      // 코딩 규칙을 정해놓는것을 '코딩 컨벤션'이라고 부름
+      // 코딩 규칙을 정해놓는것을 '코딩 컨벤션'이라고 부름 (읽고, 관리하기 쉬운 코드를 작성하기 위한 일종의 코딩 스타일 규약)
+      // 코딩 컨벤션 장점
+      // 1. 정해진 규칙이 있기 때문에 명칭이나 구조를 빠르고 정확하게 정할 수 있다.
+      // 2. 통일된 규약이 있기 때문에 모든 사람들이 코드를 이해하기 쉽고 편리하다.
+      // 3. 유지보수 비용을 줄일 수 있다.
+      // 4. 가독성이 좋다.
       let str3 = '그는 "존"이라고 불립니다.';
       let str4 = "그는 '존'이라고 불립니다.";
 
       let firstName = "John";
       let lastName = "Doe";
-      let fullName = firstName + " " + lastName; // John Doe
+      let fullName = firstName + "" + lastName; // John Doe
       console.log(fullName);
 
       // 2. Number - 숫자
       let n1 = 13; // 정수
       let n2 = 3.14; // 소수점을 갖는 수
-      // 자바 - integer, short, long, decimal, float, double
+      // 자바 - int, integer, short, long, decimal, float, double....
+      //        기본형 - boolean, char, byte, short, int, long, float, double
+      //        참조형 - 기본형 8가지를 제외한 나머지 타입
+      // int - 변수의 타입(data type) / 데이터(정수), 표현 가능 범위(-2147483648 ~ 2147483647)
+      // integer - 기본형을 객체로 다루기 위해 사용하는 클래스들을 래퍼 클래스(wrappper class) / integer는 int의 래퍼 클래스라고 할 수 있음
+      //           매개변수로 객체를 필요로 할 때, 기본형 값이 아닌 객체로 저장해야할 때, 객체 간 비교가 필요할 때
+      // short - 데이터(정수), 표현 가능 범위(-32768 ~ 32767)
+      // long - 데이터(정수), 표현 가능 범위(-9223372036854775808 ~ 9223372036854775807)
+      // float - 데이터(실수), 표현 가능 범위(1.4E-45 ~ 3.4028235E38)
+      // double - 데이터(실수), 표현 가능 범위(4.9E-324 ~ 1.7976931348623157E308)
+      // char - 데이터(문자), 표현 가능 범위(모든 유니코드 문자)
+      // byte - 데이터(정수), 표현 가능 범위(-128 ~ 128)
 
       // 3. Boolean - 참/거짓
       // 참은 true, 거짓은 false
